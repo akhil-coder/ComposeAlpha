@@ -5,7 +5,9 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.composealpha.domain.Movie
 import com.example.composealpha.network.model.MovieDtoMapper
 import com.example.composealpha.network.model.MovieDTO
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,7 +20,6 @@ class MainActivity : AppCompatActivity() {
         val networkEntity: MovieDTO = mapper.mapFromDomainModel(movie)
 
         val m: Movie = mapper.mapToDomainModel(networkEntity)
-
     }
 }
 

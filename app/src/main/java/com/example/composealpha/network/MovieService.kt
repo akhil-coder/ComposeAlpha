@@ -13,5 +13,5 @@ interface MovieService {
         @Query("sort_by") sortBy: String = "popularity.desc",
         @Query("include_adult") includeAdult: Boolean = true,
         @Query("include_video") includeVideo: Boolean = true,
-        @Query("page") page: Int,
+        @Query("page") page: Int = 1,
     ): MovieDiscoverResponse }

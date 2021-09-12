@@ -1,7 +1,11 @@
 package com.example.composealpha.domain
+import android.os.Parcelable
 import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
+import kotlinx.android.parcel.Parcelize
+
 // TODO: Support parcelable
+@Parcelize
 data class Movie(
     @PrimaryKey
     @SerializedName("id")
@@ -12,4 +16,4 @@ data class Movie(
     val posterPath: String? = null,
     @SerializedName("title")
     val title: String? = null
-)
+): Parcelable
