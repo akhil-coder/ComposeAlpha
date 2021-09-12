@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
 
         val m: Movie = mapper.mapToDomainModel(networkEntity)
 
-        val deleteit: String
+        val deleteit: String = "Delete it"
     }
 }
 
